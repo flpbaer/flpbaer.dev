@@ -36,7 +36,6 @@ export const StyledButton = styled.button`
  height: 60px;
  border: 1px solid rgba(0, 0, 0, 0.1);
  border-radius: 6px;
- margin-top: 30px;
  font-weight: 400;
  font-size: 18px;
  -webkit-backdrop-filter: blur(345px);

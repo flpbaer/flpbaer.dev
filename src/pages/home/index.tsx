@@ -17,7 +17,8 @@ import blur from "../../assets/images/blur.svg";
 import blur2 from "../../assets/images/blur2.svg";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaReact } from "react-icons/fa";
+import curriculum from "../../assets/Curriculum Felipe Baer.pdf";
+import { FaReact, FaLinkedin, FaGithub } from "react-icons/fa";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 function Home() {
   const infos = `const me = [{ name: "Felipe Baer", age: 17 }]
@@ -43,7 +44,6 @@ const techs = [{
    }];
 
 const languages = [{ 
-  
     fluent: ["portuguese (pt-br)"],
     intermediate: [
      "english (eng)",
@@ -54,6 +54,27 @@ const languages = [{
 
   return (
     <Container>
+      <span
+        style={{
+          position: "absolute",
+          top: "30px",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          opacity: 0.6,
+        }}
+      >
+        send me a e-mail!{" "}
+        <span
+          style={{ color: "#00B2FF" }}
+          onClick={() =>
+            window.open(
+              "mailto:flpbaer@gmail.com?subject=I'm interested&body=Hi Felipe"
+            )
+          }
+        >
+          click here
+        </span>
+      </span>
       <Left>
         <TextContent>
           <Title
@@ -76,7 +97,23 @@ const languages = [{
             focused on front-end
           </Description>
         </div>
-        <StyledButton>Download CV</StyledButton>
+        <div style={{ display: "flex", alignItems: 'center', marginTop: "30px" }}>
+          <StyledButton onClick={() => window.open(curriculum)}>
+            Download CV
+          </StyledButton>
+          <FaLinkedin
+            size={40}
+            style={{ cursor: "pointer", marginLeft: "10px" }}
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/felipebaer/")
+            }
+          />
+          <FaGithub
+            size={40}
+            style={{ marginLeft: "10px", cursor: "pointer" }}
+            onClick={() => window.open("https://www.github.com/flpbaer/")}
+          />
+        </div>
         <img
           src={blur}
           style={{ position: "absolute", left: "0", bottom: "80px" }}
@@ -102,7 +139,7 @@ const languages = [{
               transition: {
                 duration: 6,
                 repeat: Infinity,
-                // repeatDelay: 0.2,
+                repeatDelay: 0.2,
                 repeatType: "reverse",
               },
             },
@@ -137,17 +174,17 @@ const languages = [{
             rotate: {
               rotate: [null, -5, 5, 0],
               transition: {
-                duration: 15,
+                duration: 22,
               },
             },
             initial: {
               y: [-20, 20],
               rotate: -16,
               transition: {
-                duration: 3,
+                duration: 4,
                 repeat: Infinity,
-                // repeatDelay: 0.2,
-                repeatType: "reverse",
+                repeatDelay: 0.6,
+                repeatType: "mirror",
               },
             },
           }}
