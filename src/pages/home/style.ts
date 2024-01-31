@@ -46,6 +46,12 @@ export const Image = styled(motion.img)`
 margin-left: 12px;
 `
 
+export const SocialArea = styled(motion.div)`
+display: flex;
+align-items: center;
+margin-top: 30px;
+`
+
 export const FloatIcon = styled(motion.div)`
 width: 100px;
 height: 100px;

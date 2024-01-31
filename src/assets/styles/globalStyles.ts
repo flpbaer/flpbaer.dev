@@ -20,7 +20,7 @@ img {
 }
 `
 
-export const Description = styled.span`
+export const Description = styled(motion.span)`
   font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
   font-size: 32px;
