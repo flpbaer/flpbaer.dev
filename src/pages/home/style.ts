@@ -68,3 +68,16 @@ box-shadow: 0px 1px 21.8px 0px rgba(0, 0, 0, 0.10);
 
 
 `;
+
+
+export const Muted = styled.span`
+position: absolute;
+top: 30px;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0.6;
+`;
+
+export const Link = styled.span`
+color: #00B2FF;
+`;
