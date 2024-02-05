@@ -38,7 +38,7 @@ max-height: 80%;
 display: flex;
 flex-direction: column;
 align-items: center;
-background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 12%);
+background: ${props => props.theme.bgPanel}; 
 box-shadow: 0px -15px 24px 0px rgba(0, 0, 0, 0.10);
 `
 
