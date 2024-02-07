@@ -1,20 +1,13 @@
-import { ThemeProvider } from "styled-components"
-import GlobalStyles from "./assets/styles/globalStyles"
-import Home from "./pages/home/home"
- import { themes } from "./hooks/themeConfigurator"
-// import { useThemeMode } from "./context/useTheme"
+import GlobalStyles from "./assets/styles/globalStyles";
+import Home from "./pages/home/home";
 
 function App() {
-  // const { modeTheme } = useThemeMode();
-
   return (
     <>
-    <ThemeProvider theme={themes}>
-    <GlobalStyles />
-    <Home />
-    </ThemeProvider>
+      <GlobalStyles />
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
